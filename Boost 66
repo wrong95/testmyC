@@ -1,0 +1,11 @@
+const verdict = getMarketVerdict(data);
+const risk = getRiskLevel(data);
+const riskText = getRiskText(risk);
+
+return (
+  <View>
+    <Text>{verdict}</Text>
+    <Text>{riskText}</Text>
+  </View>
+);
+
