@@ -1,0 +1,10 @@
+function getRiskText(risk: string): string {
+  switch (risk) {
+    case "high":
+      return "Высокий риск — возможны резкие движения";
+    case "medium":
+      return "Умеренный риск — возможна волатильность";
+    default:
+      return "Низкий риск — движение стабильное";
+  }
+}
