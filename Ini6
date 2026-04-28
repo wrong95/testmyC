@@ -1,0 +1,24 @@
+function getMarketVerdict(data: MarketData): string {
+  const trend = getTrend(data);
+  const momentum = getMomentumStrength(data);
+  const quality = getMarketQuality(data);
+
+  if (trend === "bullish") {
+    if (momentum === "strong" && quality === "healthy") {
+      return "Сильный устойчивый рост";
+    }
+    if (momentum === "strong" && quality === "weakening") {
+      return "Рост, но импульс ослабевает";
+    }
+    return "Слабый рост / возможна консолидация";
+  }
+
+  if (trend === "bearish") {
+    if (momentum === "strong") {
+      return "Сильное падение с ускорением";
+    }
+    return "Снижение, но без импульса";
+  }
+
+  return "Рынок в неопределённости";
+}
