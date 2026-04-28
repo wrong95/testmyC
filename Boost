@@ -1,0 +1,11 @@
+type MarketData = {
+  priceChange7d: number;      // %
+  rsi: number;                // 0-100
+  spotCVD: number;            // %
+  futuresCVD: number;         // %
+  volumeChange: number;       // %
+  funding: number;            // отриц / полож
+  openInterestChange: number; // %
+  etfFlowChange: number;      // %
+  mvrv: number;               // коэффициент
+};
